@@ -11,6 +11,7 @@ public class ReadInputFile : MonoBehaviour
     public string restrictionsFileName = "Restrictions.txt";
     public string killsFileName = "Kills.txt";
     public string collectiblesFileName = "Collectibles.txt";
+    public string boundsFileName = "Bounds.txt";
 
     void Update()
     {
@@ -18,6 +19,7 @@ public class ReadInputFile : MonoBehaviour
         string restrictionsPath = Path.Combine(Application.streamingAssetsPath, restrictionsFileName);
         string killsPath = Path.Combine(Application.streamingAssetsPath, killsFileName);
         string collectiblesPath = Path.Combine(Application.streamingAssetsPath, collectiblesFileName);
+        string boundsPath = Path.Combine(Application.streamingAssetsPath, boundsFileName);
 
         if (File.Exists(levelsPath))
         {
@@ -60,6 +62,17 @@ public class ReadInputFile : MonoBehaviour
             for (int i = 0; i < randomize.collectibles.Length; i++)
             {
                 randomize.collectibles[i] = lines[i];
+            }
+        }
+
+        if (File.Exists(boundsPath))
+        {
+            string[] lines = File.ReadAllLines(boundsPath);
+
+            randomize.bounds = new string[lines.Length];
+            for (int i = 0; i < randomize.bounds.Length; i++)
+            {
+                randomize.bounds[i] = lines[i];
             }
         }
     }

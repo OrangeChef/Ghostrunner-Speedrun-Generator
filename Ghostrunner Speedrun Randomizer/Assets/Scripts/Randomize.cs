@@ -9,6 +9,7 @@ public class Randomize : MonoBehaviour
     public Text restrictionText;
     public Text killsText;
     public Text collectiblesText;
+    public Text boundsText;
 
     [Space]
     public AudioSource[] sounds;
@@ -16,6 +17,7 @@ public class Randomize : MonoBehaviour
     public string[] restrictions;
     public string[] kills;
     public string[] collectibles;
+    public string[] bounds;
 
     void Update()
     {
@@ -30,6 +32,9 @@ public class Randomize : MonoBehaviour
 
         if (collectiblesText.color != Color.white)
             collectiblesText.color = Color.Lerp(collectiblesText.color, Color.white, colorLerpTime * Time.deltaTime);
+
+        if (boundsText.color != Color.white)
+            boundsText.color = Color.Lerp(boundsText.color, Color.white, colorLerpTime * Time.deltaTime);
     }
 
     public void RandomizeLevel()
@@ -64,6 +69,15 @@ public class Randomize : MonoBehaviour
         int collectible = Random.Range(0, collectibles.Length);
         collectiblesText.text = collectibles[collectible];
         collectiblesText.color = Color.yellow;
+
+        sounds[Random.Range(0, sounds.Length)].Play();
+    }
+
+    public void RandomizeBounds()
+    {
+        int bound = Random.Range(0, bounds.Length);
+        boundsText.text = bounds[bound];
+        boundsText.color = Color.yellow;
 
         sounds[Random.Range(0, sounds.Length)].Play();
     }

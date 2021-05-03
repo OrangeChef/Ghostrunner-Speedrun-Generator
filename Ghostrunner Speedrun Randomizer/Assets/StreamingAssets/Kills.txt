@@ -1,3 +1,5 @@
 All Kills
-No Kills (Not including required)
-Any
+No Kills (Unless Required)
+Any Kills
+1 Kill per Room (Required kills allowed)
+All Kills (Includes Crawlers)

@@ -4,4 +4,11 @@ No Slide (Unless required)
 No Jump (Unless required)
 No Ledge-Boost
 No Wall-Dash
+No Uplinks (Unless Required)
+No Tetris Upgrades
+No Flying
+No Blink (Allowed for CV)
+No Tempest (Allowed for CV)
+No Surge (Allowed for CV)
+No Overlord (Allowed for CV)
 None

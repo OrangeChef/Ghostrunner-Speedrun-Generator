@@ -15,12 +15,14 @@ public class ResetRandomizer : MonoBehaviour
     public string restrictionsFileName = "Restrictions.txt";
     public string killsFileName = "Kills.txt";
     public string collectiblesFileName = "Collectibles.txt";
+    public string boundsFileName = "Bounds.txt";
 
     [Space]
     public string[] defaultLevels;
     public string[] defaultRestrictions;
     public string[] defaultKills;
     public string[] defaultCollectibles;
+    public string[] defaultBounds;
 
     private float resetTimer;
 
@@ -51,6 +53,10 @@ public class ResetRandomizer : MonoBehaviour
             string collectiblesPath = Path.Combine(Application.streamingAssetsPath, collectiblesFileName);
             if (File.Exists(collectiblesPath))
                 File.WriteAllLines(collectiblesPath, defaultCollectibles);
+
+            string boundsPath = Path.Combine(Application.streamingAssetsPath, boundsFileName);
+            if (File.Exists(boundsPath))
+                File.WriteAllLines(boundsPath, defaultBounds);
         }
     }
 }
