@@ -1,0 +1,7 @@
+No DSJ
+No Dash (Unless required)
+No Slide (Unless required)
+No Jump (Unless required)
+No Ledge-Boost
+No Wall-Dash
+None
