@@ -8,5 +8,6 @@ The IL speedrun can have these randomized properties:
     -Randomized restriction
     -Randomized kills
     -Randomized collectibles
+    -Randonized bounds
 
 Feel free to use this for whatever you want to use it for.
